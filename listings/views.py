@@ -17,6 +17,7 @@ def index(request):
     return render(request, 'listings/listings.html', context)
 
 def listing(request, listing_id):
+    # listing_id is passed through the browser because of how we configured it in the urls.py file
   listing = get_object_or_404(Listing, pk=listing_id)
 
   context = {
